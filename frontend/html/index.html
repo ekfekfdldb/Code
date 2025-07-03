@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/index.css" crossorigin="anonymous" />
+  <title>Community</title>
+</head>
+
+<body>
+  <div class="background"></div>
+
+  <!-- 시계 -->
+  <div class="analog-clock">
+    <div class="hand hour-hand"></div>
+    <div class="hand minute-hand"></div>
+    <div class="hand second-hand"></div>
+    <div class="center-dot"></div>
+  </div>
+
+  <!-- ⭐ 좌우 레이아웃 감싸는 FLEX 컨테이너 -->
+  <div class="page-layout">
+
+    <!-- 왼쪽 사이드 (태그/슬로건) -->
+    <aside class="left-info">
+      <div class="slogan">
+        <h2>함께 나누는 <span>이야기</span> 공간</h2>
+        <p>우리의 소소한 일상부터 중요한 꿀팁까지 공유해보세요</p>
+      </div>
+
+      <div class="tag-buttons">
+        <button>#자유</button>
+        <button>#정보</button>
+        <button>#Q&A</button>
+        <button>#잡담</button>
+        <button>#꿀팁</button>
+        <button>#후기</button>
+        <button>#추천</button>
+      </div>
+    </aside>
+
+    <!-- 오른쪽 메인 -->
+    <section class="wrap">
+      <div class="section-header">
+        <div class="emoji-icon">👥</div>
+        <h2>유용한 정보와 <span>이야기</span>를 함께 나누세요.</h2>
+        <p class="section-subtitle">소소한 일상부터 중요한 정보까지, 자유롭게 소통해보세요.</p>
+      </div>
+
+      <div class="write">
+        <a href="./board-write.html" id="writeLink">게시글 작성</a>
+      </div>
+      <section class="boardList"></section>
+    </section>
+  </div>
+
+  <script src="../js/index.js" type="module"></script>
+  <script type="module">
+    import { startClock } from '../js/clock.js';
+    startClock();
+  </script>
+</body>
+
+</html>

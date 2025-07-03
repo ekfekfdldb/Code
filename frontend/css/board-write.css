@@ -1,0 +1,165 @@
+@import url('./common/layout.css');
+@import url('../component/header/header.css');
+
+.wrap {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    justify-content: flex-start;
+    row-gap: 16px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(69, 72, 84, 1);
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    width: 100%;
+}
+
+.inputBox label {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    color: rgba(69, 72, 84, 1);
+
+    padding: 16px 16px;
+
+    border-bottom: 1px solid #00000029;
+}
+.inputBox input {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-bottom: 1px solid #00000029;
+    background-color: transparent;
+}
+
+.inputBox textarea {
+    width: 100%;
+    padding: 16px;
+    height: 200px;
+    resize: none;
+    outline: none;
+
+    border: none;
+    border-bottom: 1px solid #00000029;
+    background-color: transparent;
+}
+
+.wrap button {
+    width: 80%;
+    height: 33px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    background-color: #aca0eb;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16.8px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+
+    border: none;
+}
+
+.non-border {
+    border: none !important;
+    padding: 0 16px !important;
+}
+
+.deleteFile {
+    cursor: pointer;
+    padding-left: 10px;
+    color: red;
+}
+
+.helperText {
+    color: #f00;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.inputBox input,
+.inputBox textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputBox input:focus,
+.inputBox textarea:focus {
+  border-color: #aca0eb;
+  box-shadow: 0 0 0 2px rgba(172, 160, 235, 0.2);
+  outline: none;
+}
+
+/* 숨겨진 진짜 파일 인풋 */
+/* 가짜 버튼 (label 역할) */
+.file-upload-button {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #aca0eb;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.file-upload-button:hover {
+  background-color: #9a8ee0;
+}
+
+/* 선택된 파일명 스타일 */
+#selectedFileName {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  color: #555;
+}
+
+.inputBox input[type="file"] {
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+/* 진짜 버튼 모양 커스텀 */
+.inputBox input[type="file"]::-webkit-file-upload-button {
+  color: #fff;
+  background-color: #aca0eb;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.inputBox input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #9a8ee0;
+}

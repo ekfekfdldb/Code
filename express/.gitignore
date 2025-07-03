@@ -4,7 +4,7 @@ node_modules/
 # Logs
 *.log
 
-# lockfiles (선택적 무시)
+# lock files (선택적 무시)
 package-lock.json
 yarn.lock
 yarn-error.json

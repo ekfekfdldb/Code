@@ -26,10 +26,8 @@ exports.loginUser = async (requestData, response) => {
     if (!results[0] || results[0] === 'undefined' || results[0] === undefined)
         return null;
 
-    // const match = await bcrypt.compare(password, results[0].password);
-    const match = password === results[0].password;
+    const match = await bcrypt.compare(password, results[0].password);
     if (!match) return null;
-
 
     if (results[0].file_id !== null) {
         const profileSql = `SELECT file_path FROM file_table WHERE file_id = ? AND deleted_at IS NULL AND file_category = 1;`;

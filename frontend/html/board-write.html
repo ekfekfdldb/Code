@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 작성</title>
+    <link rel="stylesheet" href="../css/board-write.css" crossorigin="anonymous" />
+</head>
+
+<body>
+    <!-- 왼쪽 사이드 (태그/슬로건) -->
+    <aside class="left-info">
+        <div class="slogan">
+            <h2>함께 나누는 <span>이야기</span> 공간</h2>
+            <p>우리의 소소한 일상부터 중요한 꿀팁까지 공유해보세요</p>
+        </div>
+
+        <div class="tag-buttons">
+            <button>#자유</button>
+            <button>#정보</button>
+            <button>#Q&A</button>
+            <button>#잡담</button>
+            <button>#꿀팁</button>
+            <button>#후기</button>
+            <button>#추천</button>
+        </div>
+    </aside>
+    <div class="background"></div>
+
+    <div class="analog-clock">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center-dot"></div>
+    </div>
+    <div class="wrap">
+        <h2>게시글 작성</h2>
+        <div class="inputBox">
+            <label>제목*</label>
+            <input type="text" id="title" placeholder="제목을 입력해 주세요. (최대 26자)" />
+        </div>
+        <div class="inputBox">
+            <label>내용*</label>
+            <textarea id="content" placeholder="내용을 입력해 주세요."></textarea>
+            <p class="helperText" name="content"></p>
+        </div>
+        <div class="inputBox">
+            <label class="non-border">이미지*</label>
+            <input type="file" id="image" accept="image/*" />
+        </div>
+        <button id="submit">완료</button>
+    </div>
+    <div class="background"></div>
+</body>
+<script src="../js/board-write.js" type="module"></script>
+<script type="module">
+    import { startClock } from '../js/clock.js';
+    startClock();
+</script>
+
+</html>

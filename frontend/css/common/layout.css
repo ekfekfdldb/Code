@@ -1,0 +1,191 @@
+@import url('../../component/dialog/dialog.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 calc(50vw - 212.5px);
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 142px;
+  padding-bottom: 16px;
+  transform: translateX(300px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f4f5f7;
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: -1;
+  background: url('/public/background/backgr1.png');
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  filter: brightness(2);
+}
+
+.background::before {
+  content: '';
+  /* 가상 요소에는 content 속성이 필수 */
+  position: absolute;
+  /* 배경 위에 오버레이로 깔림 */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* 어두운 오버레이 색상과 투명도 설정 */
+  /* rgba의 마지막 값(0.5)은 투명도를 의미하며, 0에서 1 사이의 값을 가질 수 있습니다.
+       0에 가까울수록 투명해지고, 1에 가까울수록 불투명해집니다. */
+}
+
+:root {
+  --clock-size: 200px;
+  --hand-width: 3px;
+}
+
+.analog-clock {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  background-color: rgba(30,30,30,0.2);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+
+.hand {
+  position: absolute;
+  background: #ffffff;
+  transform-origin: bottom center;
+}
+
+.hour-hand {
+  width: 6px;
+  height: 60px;
+  top: 40px;
+  left: 97px;
+}
+
+.minute-hand {
+  width: 4px;
+  height: 75px;
+  top: 25px;
+  left: 98px;
+}
+
+.second-hand {
+  width: 2px;
+  height: 85px;
+  top: 15px;
+  left: 99px;
+  background: #ff6b6b;
+}
+
+
+.center-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  top: 51%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* 왼쪽 슬로건 영역 */
+.left-info {
+  position: fixed;
+  top: 40%;
+  left: 20%;
+  transform: translateY(-50%);
+  width: 400px;
+  padding: 32px 24px;
+
+  text-align: center;
+  z-index: 10;
+}
+
+.slogan h2 {
+  font-size: 34px;
+  font-weight: 900;
+  color: #333;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.slogan h2 span {
+  color: #a557da;  /* 포인트 컬러 강조 */
+}
+
+.slogan p {
+  font-size: 17px;
+  color: #333;
+  margin-bottom: 26px;
+  letter-spacing: -0.3px;
+  line-height: 1.5;
+  max-width: 90%;
+  margin: 0 auto 26px auto;
+}
+
+
+/* 태그 버튼 그룹 */
+.tag-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* 태그 버튼 디자인 */
+.tag-buttons button {
+  background-color: #fce5ef;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tag-buttons button:hover {
+  background-color: #f48fb1;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.tag-buttons button.active {
+  background-color: #f06292;
+  color: white;
+}

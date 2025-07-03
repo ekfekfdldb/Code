@@ -1,0 +1,113 @@
+.boardItem-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 카드 본체 */
+.boardItem {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 18px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.boardItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+
+/* 제목 */
+.boardItem-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding: 0;
+  color: #222;
+}
+
+/* 메타 정보 블록 */
+.boardItem-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 좋아요/댓글/조회수 라벨 */
+.boardItem-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: #f5f5f5;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background 0.2s ease;
+}
+
+/* 좋아요 라벨 */
+.stat-like {
+  background: #fde2e4;
+  color: #b34d4d;
+}
+
+/* 댓글 라벨 */
+.stat-comment {
+  background: #e6e6fa;
+  color: #5a4d99;
+}
+
+/* 조회수 라벨 */
+.stat-views {
+  background: #e0f7f4;
+  color: #3b7d7a;
+}
+
+
+.stat:hover {
+  background: #e6e6e6;
+}
+
+/* 날짜 */
+.boardItem-date {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* 작성자 영역 */
+.boardItem-writer {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 12px;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 14px;
+  background: #fff;
+}
+
+.writer-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.writer-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}

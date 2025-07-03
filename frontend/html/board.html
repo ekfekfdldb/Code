@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/board.css" crossorigin="anonymous" />
+    <title>게시판 상세</title>
+</head>
+
+<body>
+    <!-- 왼쪽 사이드 (태그/슬로건) -->
+    <aside class="left-info">
+        <div class="slogan">
+            <h2>함께 나누는 <span>이야기</span> 공간</h2>
+            <p>우리의 소소한 일상부터 중요한 꿀팁까지 공유해보세요</p>
+        </div>
+
+        <div class="tag-buttons">
+            <button>#자유</button>
+            <button>#정보</button>
+            <button>#Q&A</button>
+            <button>#잡담</button>
+            <button>#꿀팁</button>
+            <button>#후기</button>
+            <button>#추천</button>
+        </div>
+    </aside>
+    <div class="background"></div>
+
+    <div class="analog-clock">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center-dot"></div>
+    </div>
+    <section class="wrap">
+        <section class="head">
+            <h1 class="title"></h1>
+            <div class="writerWrap">
+                <picture class="profileImg">
+                    <img class="img" src="/public/profile_default.svg" />
+                </picture>
+                <h2 class="nickname"></h2>
+                <h3 class="createdAt"></h3>
+                <div class="mod hidden">
+                    <button id="modifyBtn">수정</button>
+                    <button id="deleteBtn">삭제</button>
+                </div>
+            </div>
+        </section>
+        <section class="body">
+            <div class="contentImg"></div>
+            <article class="content"></article>
+            <article class="bodyWrap">
+                <div class="commentWrap">
+                    <div class="viewCount">
+                        <h3></h3>
+                        <p>조회수</p>
+                    </div>
+                    <div class="commentCount">
+                        <h3></h3>
+                        <p>댓글</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="comment">
+            <div class="commentInputWrap">
+                <textarea placeholder="댓글을 남겨주세요!"></textarea>
+                <div>
+                    <button class="commentInputBtn">댓글 등록</button>
+                </div>
+            </div>
+            <div class="commentList"></div>
+        </section>
+    </section>
+    <div class="background"></div>
+</body>
+<script src="../js/board.js" type="module"></script>
+<script type="module">
+    import { startClock } from '../js/clock.js';
+    startClock();
+</script>
+
+
+</html>
